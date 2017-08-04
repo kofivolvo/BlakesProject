@@ -1,6 +1,23 @@
 angular.module('left-lane-app', [ 'ui.router'])
 
-.config(function($stateProvider){
+.config(function($stateProvider, $urlRouterProvider, $locationProvider){
+
+
+  $urlRouterProvider.otherwise('/')
+
+  // $locationProvider.hashPrefix('!');
+
+    $stateProvider
+      .state('home', {
+        url: '/',
+        templateUrl: 'src/templates/home.html',
+      })
+
+
+      .state('shop',{
+        url:'/shop',
+        templateUrl: 'src/templates/shop.html'
+      })
 
 
   $(function() {
