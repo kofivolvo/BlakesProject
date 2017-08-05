@@ -1,6 +1,7 @@
 
 body {
   padding-top: 330px;
+
 }
 
 .sticky-shrinknav-menu {
@@ -41,6 +42,7 @@ body {
 }
 
 .sticky-shrinknav-header {
+  z-index: 3;
   width: 100%;
   height: 300px;
   display: -webkit-flex;
@@ -86,8 +88,9 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
   background-color: #fefefe;
   border: 1px solid #e6e6e6;
   padding: 1rem;
+  margin-right: 100px;
+  margin-left: 100px;
   margin-bottom: 1.5rem;
-  position: sticky;
 }
 
 .product-card-thumbnail {

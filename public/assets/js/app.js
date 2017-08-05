@@ -1,5 +1,7 @@
 angular.module('left-lane-app', [ 'ui.router'])
 
+
+
 .config(function($stateProvider, $urlRouterProvider, $locationProvider){
 
 
@@ -20,6 +22,8 @@ angular.module('left-lane-app', [ 'ui.router'])
       })
 
 
+  $(document).foundation()
+
   $(function() {
     $(window).scroll(function() {
       var winTop = $(window).scrollTop();
@@ -33,8 +37,11 @@ angular.module('left-lane-app', [ 'ui.router'])
 
 
 
-
-
-
-
 })
+
+
+.directive('navBar', function() {
+  return {
+    templateUrl:'src/templates/navbar.html'
+  };
+});
