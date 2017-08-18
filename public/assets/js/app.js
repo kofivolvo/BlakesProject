@@ -21,6 +21,17 @@ angular.module('left-lane-app', [ 'ui.router'])
         templateUrl: 'src/templates/shop.html'
       })
 
+      .state('product',{
+        url:'/product',
+        templateUrl: 'src/templates/product.html'
+      })
+
+      .state('cart',{
+        url:'/cart',
+        templateUrl: 'src/templates/cart.html'
+      })
+
+
 
   $(document).foundation()
 
@@ -34,6 +45,11 @@ angular.module('left-lane-app', [ 'ui.router'])
       }
     });
   });
+
+
+  $('.sim-thumb').on('click', function() {
+    $('#main-product-image').attr('src', $(this).data('image'));
+  })
 
 
 
