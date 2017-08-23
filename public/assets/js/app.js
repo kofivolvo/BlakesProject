@@ -1,4 +1,4 @@
-angular.module('left-lane-app', [ 'ui.router'])
+angular.module('left-lane-app', [ 'ui.router', 'ngCookies'])
 
 
 
@@ -18,7 +18,12 @@ angular.module('left-lane-app', [ 'ui.router'])
 
       .state('shop',{
         url:'/shop',
-        templateUrl: 'src/templates/shop.html'
+        templateUrl: 'src/templates/shop.html',
+        controller: function ($scope, $cookies) {
+
+
+
+        }
       })
 
       .state('product',{
@@ -29,6 +34,11 @@ angular.module('left-lane-app', [ 'ui.router'])
       .state('cart',{
         url:'/cart',
         templateUrl: 'src/templates/cart.html'
+      })
+
+      .state('checkout', {
+        url:"/checkout",
+        templateUrl: 'src/templates/checkout.html'
       })
 
 
